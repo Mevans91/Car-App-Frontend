@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Car-App-Frontend"
+    }
+  },
+  "defaultProject": "Car-App-Frontend",
+  "cli": {
+    "analytics": false
+  }
 }
