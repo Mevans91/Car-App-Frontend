@@ -12,13 +12,21 @@ import {
   faSpinner, faAngleLeft, faAngleRight, faPlus, faStar, faStarHalfAlt, faArrowRight, faUpload, 
   faVideo, faEdit, faPen, faTrashAlt, faSearch, faUser, faKey, faEye, faEyeSlash, faSignInAlt, faSignOutAlt, faUserPlus, faCircle
 } from '@fortawesome/free-solid-svg-icons';
+import { VehiclesComponent } from './vehicles/vehicles.component';
+import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
+import { AdminComponent } from './admin/admin.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    VehiclesComponent,
+    VehicleListComponent,
+    AdminComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

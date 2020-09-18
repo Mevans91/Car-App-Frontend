@@ -1,0 +1,15 @@
+<div *ngIf="vehicle">
+
+  <h3> <span class="title">{{vehicle.year}} {{vehicle.make}} {{vehicle.model}}</span> Details</h3>
+  <div class="condition"><span>Condition: {{vehicle.condition | uppercase}}</span></div>
+  <div class="miles"><span>Mileage: {{vehicle.mileage}} miles</span></div>
+  <div class="scheduled"><span>Scheduled Service: {{vehicle.service_scheduled}}</span>
+  </div>
+  <div>
+    <button class="scheduler"> Schedule Service </button>
+  </div>
+
+  <div>
+    <button (click)="goBack()">Go Back</button>
+  </div>
+</div>
