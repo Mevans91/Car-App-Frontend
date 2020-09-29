@@ -4,10 +4,16 @@ import { HomeComponent } from './home/home.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
 import { AdminComponent } from './admin/admin.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
     path: '',
+    component: HomeComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'home',
     component: HomeComponent,
     pathMatch: 'full'
   },
@@ -22,6 +28,10 @@ const routes: Routes = [
   {
     path: 'admin',
     component: AdminComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   }
 ];
 
