@@ -14,13 +14,9 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
-import { AdminComponent } from './admin/admin.component';
-
 import { LoginComponent } from './login/login.component';
 import { UserComponent } from './user/user.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AdminLoginComponent } from './admin-login/admin-login.component';
-import { AdminCreatorComponent } from './admin-creator/admin-creator.component';
 import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
@@ -31,11 +27,8 @@ import { SignupComponent } from './signup/signup.component';
     HomeComponent,
     VehiclesComponent,
     VehicleListComponent,
-    AdminComponent,
     LoginComponent,
     UserComponent,
-    AdminLoginComponent,
-    AdminCreatorComponent,
     SignupComponent
   ],
   imports: [
@@ -46,6 +39,7 @@ import { SignupComponent } from './signup/signup.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+
 
   ],
   providers: [],

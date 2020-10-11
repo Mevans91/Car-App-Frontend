@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Vehicle } from './_models/vehicle';
+import { Vehicle } from '../_models/vehicle';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http'
@@ -87,7 +87,7 @@ export class VehicleService {
   }
 
   /* GET vehicles whose name contains search term */
-searchVehicle(term: string): Observable<Vehicle[]> {
+ searchVehicle(term: string): Observable<Vehicle[]> {
   if (!term.trim()) {
     // if not search term, return empty vehicle array.
     return of([]);
@@ -95,5 +95,5 @@ searchVehicle(term: string): Observable<Vehicle[]> {
   return this.http.get<Vehicle[]>(`${this.vehicleUrl}/?name=${term}`).pipe(
     catchError(this.handleError<Vehicle[]>('searchVehicles', []))
   );
-}
+  }
 }

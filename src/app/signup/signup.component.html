@@ -3,12 +3,12 @@
     <form class="form p-5 mb-5 mt-lg-5" [formGroup]="form">
       <ngb-alert class="text-center" *ngIf="errorMsg" type="danger" (close)="errorMsg = null">{{ errorMsg }}
       </ngb-alert>
-      <h2 class="mb-5">Sign Up</h2>
+      <h2 class="mb-5">Register User</h2>
       <div class="form-group row">
         <div class="col-6">
           <label class="label">First Name</label>
           <input [ngClass]="{'is-invalid': hasError && form.get('firstName').errors}" class="form-control" type="text"
-            formControlName="firstName" placeholder="Jane">
+            formControlName="firstName" placeholder="John">
           <label class="form-error" *ngIf="hasError && form.get('firstName').errors">
             <span class="text-danger" *ngIf="form.get('firstName').errors['required']">
               First Name is required!
@@ -94,9 +94,6 @@
               *ngIf="submitting" [icon]="['fas', 'spinner']" size="lg" class="ml-2 fa-spinner" spin="true">
             </fa-icon></button>
         </div>
-      </div>
-      <div class="col-12 text-center mt-4 p-0">
-        <p class="form-bottom-p">Already signed up? <a class="form-link" [routerLink]="['/login']">Sign in here</a></p>
       </div>
     </form>
   </div>

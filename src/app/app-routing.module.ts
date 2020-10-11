@@ -3,8 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
-import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 const routes: Routes = [
@@ -16,6 +16,11 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'signup',
+    component: SignupComponent,
     pathMatch: 'full'
   },
   {
@@ -33,11 +38,7 @@ const routes: Routes = [
     component: LoginComponent,
     pathMatch: 'full'
   },
-  {
-    path: 'admin/:id',
-    component: AdminComponent,
-    pathMatch: 'full'
-  }
+
 ];
 
 @NgModule({

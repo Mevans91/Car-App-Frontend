@@ -1,4 +1,4 @@
-<nav *ngIf="!currentUser && !currentAdmin && router.isActive('/home', true)"  class="navbar navbar-expand">
+<nav *ngIf="!currentUser && router.isActive('/home', true)"  class="navbar navbar-expand">
   <img src="./../../assets/images/Buzzle.png" alt="logo" width="80px" height="80px" [routerLink]="['/home']">
   <a class="navbar-brand" [routerLink]="['/home']">Hive</a>
 
@@ -11,8 +11,30 @@
           </button>
         </a>
       </li>
+    </ul>
+  </div>
+</nav>
+
+<nav *ngIf="currentUser && router.isActive('/home', true)"  class="navbar navbar-expand">
+  <img src="./../../assets/images/Buzzle.png" alt="logo" width="80px" height="80px" [routerLink]="['/home']">
+  <a class="navbar-brand" [routerLink]="['/home']">Hive</a>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active mt-2 d-none d-md-block">
+        <a class="nav-link text-uppercase">
+            Hi, {{currentUser.username}}!
+        </a>
+    </li>
       <li class="nav-item mt-2">
-        <a class="nav-link" [routerLink]="['/admin/login']"><button class="btn btn-outline-primary btn-navbar">Admin
+        <a class="nav-link" [routerLink]="['/login']">
+          <button class="btn btn-outline-primary btn-navbar">Profile
+              <fa-icon [icon]="['fas', 'sign-in-alt']" size="sm"></fa-icon>
+          </button>
+        </a>
+      </li>
+      <li class="nav-item mt-2">
+        <a class="nav-link" [routerLink]="['/admin-login']"><button class="btn btn-outline-primary btn-navbar">Quick Links
           <fa-icon [icon]="['fas', 'chalkboard-teacher']" size="sm" class="Admin"></fa-icon>
       </button></a>
       </li>
@@ -37,7 +59,7 @@
   </div>
 </nav>
 
-<nav *ngIf="router.isActive('/adminLogin', true)"  class="navbar navbar-expand">
+<nav *ngIf="router.isActive('/signup', true)"  class="navbar navbar-expand">
   <img src="./../../assets/images/Buzzle.png" alt="logo" width="80px" height="80px" [routerLink]="['/home']">
   <a class="navbar-brand" [routerLink]="['/home']">Hive</a>
 
@@ -53,55 +75,6 @@
   </div>
 </nav>
 
-<nav *ngIf="currentUser && router.isActive('/home', true)"  class="navbar navbar-expand">
-  <img src="./../../assets/images/Buzzle.png" alt="logo" width="80px" height="80px" [routerLink]="['/home']">
-  <a class="navbar-brand" [routerLink]="['/home']">Hive</a>
 
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item active mt-2 d-none d-md-block">
-        <a class="nav-link text-uppercase">
-            Hi, {{currentUser.userName}}!
-        </a>
-    </li>
-      <li class="nav-item mt-2">
-        <a class="nav-link" [routerLink]="['/login']">
-          <button class="btn btn-outline-primary btn-navbar">Profile
-              <fa-icon [icon]="['fas', 'sign-in-alt']" size="sm"></fa-icon>
-          </button>
-        </a>
-      </li>
-      <li class="nav-item mt-2">
-        <a class="nav-link" [routerLink]="['/admin-login']"><button class="btn btn-outline-primary btn-navbar">Quick Links
-          <fa-icon [icon]="['fas', 'chalkboard-teacher']" size="sm" class="Admin"></fa-icon>
-      </button></a>
-      </li>
-
-    </ul>
-  </div>
-</nav>
-
-<nav *ngIf="currentAdmin && router.isActive('/home', true)"  class="navbar navbar-expand">
-  <img src="./../../assets/images/Buzzle.png" alt="logo" width="80px" height="80px" [routerLink]="['/home']">
-  <a class="navbar-brand" [routerLink]="['/home']">Hive</a>
-
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item mt-2">
-        <a class="nav-link" [routerLink]="['/login']">
-          <button class="btn btn-outline-primary btn-navbar">
-              <fa-icon [icon]="['fas', 'sign-in-alt']" size="sm"></fa-icon>
-          </button>
-        </a>
-      </li>
-      <li class="nav-item mt-2">
-        <a class="nav-link" [routerLink]="['/admin-login']"><button class="btn btn-outline-primary btn-navbar">Admin
-          <fa-icon [icon]="['fas', 'chalkboard-teacher']" size="sm" class="Admin"></fa-icon>
-      </button></a>
-      </li>
-
-    </ul>
-  </div>
-</nav>
 
 
