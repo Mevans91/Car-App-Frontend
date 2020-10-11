@@ -1,81 +1,107 @@
- <nav *ngIf="!currentUser" class="navbar navbar-expand">
-    <a class="navbar-brand" [routerLink]="['/home']">AutoLink</a>
+<nav *ngIf="!currentUser && !currentAdmin && router.isActive('/home', true)"  class="navbar navbar-expand">
+  <img src="./../../assets/images/Buzzle.png" alt="logo" width="80px" height="80px" [routerLink]="['/home']">
+  <a class="navbar-brand" [routerLink]="['/home']">Hive</a>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item mt-2">
-          <a class="nav-link" [routerLink]="['/login']">
-            <button class="btn btn-outline-primary btn-navbar">Sign In
-                <fa-icon [icon]="['fas', 'sign-in-alt']" size="sm" class="text-flix-red"></fa-icon>
-            </button>
-          </a>
-        </li>
-        <li class="nav-item mt-2">
-          <a class="nav-link" [routerLink]="['/admin']"><button class="btn btn-outline-primary btn-navbar">Admin
-            <fa-icon [icon]="['fas', 'chalkboard-teacher']" size="sm" class="Admin"></fa-icon>
-        </button></a>
-        </li>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item mt-2">
+        <a class="nav-link" [routerLink]="['/login']">
+          <button class="btn btn-outline-primary btn-navbar">Sign In
+              <fa-icon [icon]="['fas', 'sign-in-alt']" size="sm"></fa-icon>
+          </button>
+        </a>
+      </li>
+      <li class="nav-item mt-2">
+        <a class="nav-link" [routerLink]="['/admin/login']"><button class="btn btn-outline-primary btn-navbar">Admin
+          <fa-icon [icon]="['fas', 'chalkboard-teacher']" size="sm" class="Admin"></fa-icon>
+      </button></a>
+      </li>
 
-      </ul>
-    </div>
-  </nav>
+    </ul>
+  </div>
+</nav>
 
-  <nav *ngIf="currentUser" class="navbar navbar-expand navbar-dark">
-    <a class="navbar-brand" [routerLink]="['/home']">
-        <img src="./assets/images/CodeFlix-Logo.svg" width="150" height="30" />
-    </a>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auo">
-            <li class="nav-item active">
-                <a class="nav-link d-none d-lg-block" [routerLink]="['/home']">
-                    <button class="btn btn-outline-primary btn-flix-navbar">All Movies
-                        <fa-icon [icon]="['fas', 'arrow-right']" size="sm" class="ml-2 text-flix-red"></fa-icon>
-                    </button>
-                </a>
-            </li>
-            <li class="nav-item active icon d-block d-lg-none">
-                <a class="nav-link" [routerLink]="['/home']">
-                    <fa-stack>
-                        <fa-icon [icon]="['fas', 'circle']" class="text-flix-red" stackItemSize="2x"></fa-icon>
-                        <fa-icon [icon]="['fas', 'video']" class="text-white" stackItemSize="1x"></fa-icon>
-                    </fa-stack>
-                </a>
-            </li>
-            <li class="nav-item mr-5 d-none d-lg-block">
-                <a class="nav-link" [routerLink]="['/movies/new']">
-                    <button class="btn btn-outline-primary btn-flix-navbar">Add New Movie
-                        <fa-icon [icon]="['fas', 'plus']" size="sm" class="ml-2 text-flix-red"></fa-icon>
-                    </button>
-                </a>
-            </li>
-            <li class="nav-item icon active d-block d-lg-none">
-                <a class="nav-link" [routerLink]="['/movies/new']">
-                    <fa-stack>
-                        <fa-icon [icon]="['fas', 'circle']" class="text-flix-red" stackItemSize="2x"></fa-icon>
-                        <fa-icon [icon]="['fas', 'plus']" class="text-white" stackItemSize="1x"></fa-icon>
-                    </fa-stack>
-                </a>
-            </li>
-            <li class="nav-item active mt-2 d-none d-md-block">
-                <a class="nav-link text-uppercase">
-                    Hi, {{currentUser.nickname}}!
-                </a>
-            </li>
-            <li class="nav-item small ml-small-10 active mt-2">
-                <a class="nav-link text-uppercase vl-red">
-                </a>
-            </li>
-            <li class="nav-item small active mt-2 w-small">
-                <a class="nav-link text-uppercase" (click)="logoutUser()">
-                    SIGN OUT
-                </a>
-            </li>
-        </ul>
-    </div>
-  </nav>
+<nav *ngIf="router.isActive('/login', true)"  class="navbar navbar-expand">
+  <img src="./../../assets/images/Buzzle.png" alt="logo" width="80px" height="80px" [routerLink]="['/home']">
+  <a class="navbar-brand" [routerLink]="['/home']">Hive</a>
 
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item mt-2">
+        <a class="nav-link" [routerLink]="['/home']">
+          <button class="btn btn-outline-primary btn-navbar">Back
+              <fa-icon [icon]="['fas', 'arrow-left']" size="sm"></fa-icon>
+          </button>
+        </a>
+    </ul>
+  </div>
+</nav>
 
+<nav *ngIf="router.isActive('/adminLogin', true)"  class="navbar navbar-expand">
+  <img src="./../../assets/images/Buzzle.png" alt="logo" width="80px" height="80px" [routerLink]="['/home']">
+  <a class="navbar-brand" [routerLink]="['/home']">Hive</a>
 
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item mt-2">
+        <a class="nav-link" [routerLink]="['/home']">
+          <button class="btn btn-outline-primary btn-navbar">Back
+              <fa-icon [icon]="['fas', 'arrow-left']" size="sm"></fa-icon>
+          </button>
+        </a>
+    </ul>
+  </div>
+</nav>
 
+<nav *ngIf="currentUser && router.isActive('/home', true)"  class="navbar navbar-expand">
+  <img src="./../../assets/images/Buzzle.png" alt="logo" width="80px" height="80px" [routerLink]="['/home']">
+  <a class="navbar-brand" [routerLink]="['/home']">Hive</a>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active mt-2 d-none d-md-block">
+        <a class="nav-link text-uppercase">
+            Hi, {{currentUser.userName}}!
+        </a>
+    </li>
+      <li class="nav-item mt-2">
+        <a class="nav-link" [routerLink]="['/login']">
+          <button class="btn btn-outline-primary btn-navbar">Profile
+              <fa-icon [icon]="['fas', 'sign-in-alt']" size="sm"></fa-icon>
+          </button>
+        </a>
+      </li>
+      <li class="nav-item mt-2">
+        <a class="nav-link" [routerLink]="['/admin-login']"><button class="btn btn-outline-primary btn-navbar">Quick Links
+          <fa-icon [icon]="['fas', 'chalkboard-teacher']" size="sm" class="Admin"></fa-icon>
+      </button></a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+<nav *ngIf="currentAdmin && router.isActive('/home', true)"  class="navbar navbar-expand">
+  <img src="./../../assets/images/Buzzle.png" alt="logo" width="80px" height="80px" [routerLink]="['/home']">
+  <a class="navbar-brand" [routerLink]="['/home']">Hive</a>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item mt-2">
+        <a class="nav-link" [routerLink]="['/login']">
+          <button class="btn btn-outline-primary btn-navbar">
+              <fa-icon [icon]="['fas', 'sign-in-alt']" size="sm"></fa-icon>
+          </button>
+        </a>
+      </li>
+      <li class="nav-item mt-2">
+        <a class="nav-link" [routerLink]="['/admin-login']"><button class="btn btn-outline-primary btn-navbar">Admin
+          <fa-icon [icon]="['fas', 'chalkboard-teacher']" size="sm" class="Admin"></fa-icon>
+      </button></a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
 
 

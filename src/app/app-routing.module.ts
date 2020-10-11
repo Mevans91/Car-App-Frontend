@@ -6,12 +6,13 @@ import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
 import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './login/login.component';
 
+
 const routes: Routes = [
-  {
-    path: '',
-    component: HomeComponent,
-    pathMatch: 'full'
-  },
+   {
+     path: '',
+     redirectTo: 'home',
+     pathMatch: 'full'
+   },
   {
     path: 'home',
     component: HomeComponent,
@@ -19,19 +20,23 @@ const routes: Routes = [
   },
   {
     path: 'vehicles',
-    component: VehicleListComponent
+    component: VehicleListComponent,
+    pathMatch: 'full'
   },
   {
     path: 'vehicle/:id',
-    component: VehiclesComponent
-  },
-  {
-    path: 'admin',
-    component: AdminComponent
+    component: VehiclesComponent,
+    pathMatch: 'full'
   },
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'admin/:id',
+    component: AdminComponent,
+    pathMatch: 'full'
   }
 ];
 

@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'Placeholder until API is working'
+  apiUrl: 'https://car-delearship-api.herokuapp.com/'
 };
 
 /*

@@ -17,7 +17,7 @@ export class VehiclesComponent implements OnInit {
    model: 'Sonata',
    year: 2013,
    mileage: 100000,
-   service_scheduled: 'none',
+   serviceScheduled: 'none',
    condition: 'used'
  }
   constructor(
