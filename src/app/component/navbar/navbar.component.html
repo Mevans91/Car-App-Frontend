@@ -10,7 +10,7 @@
               <fa-icon [icon]="['fas', 'sign-in-alt']" size="sm"></fa-icon>
           </button>
         </a>
-      </li>
+
     </ul>
   </div>
 </nav>
@@ -26,18 +26,17 @@
             Hi, {{currentUser.username}}!
         </a>
     </li>
-      <li class="nav-item mt-2">
-        <a class="nav-link" [routerLink]="['/login']">
-          <button class="btn btn-outline-primary btn-navbar">Profile
-              <fa-icon [icon]="['fas', 'sign-in-alt']" size="sm"></fa-icon>
-          </button>
-        </a>
-      </li>
-      <li class="nav-item mt-2">
-        <a class="nav-link" [routerLink]="['/admin-login']"><button class="btn btn-outline-primary btn-navbar">Quick Links
-          <fa-icon [icon]="['fas', 'chalkboard-teacher']" size="sm" class="Admin"></fa-icon>
-      </button></a>
-      </li>
+    <li class="nav-item mt-3 dropdown">
+      <button class="btn btn-outline-primary btn-navbar" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Quick Links <fa-icon [icon]="['fas', 'bars']"></fa-icon>
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">View Inventory</a>
+        <a class="dropdown-item" href="#">Service</a>
+        <a class="dropdown-item" href="#">Appointments</a>
+        <a class="dropdown-item" href="#">Profile</a>
+      </div>
+    </li>
 
     </ul>
   </div>
@@ -71,6 +70,7 @@
               <fa-icon [icon]="['fas', 'arrow-left']" size="sm"></fa-icon>
           </button>
         </a>
+        </li>
     </ul>
   </div>
 </nav>
