@@ -20,7 +20,7 @@ export class UserService {
     private storage: LocalStorageService,
     private router: Router
   ) {
-    this.userApi = `${environment.apiUrl}api/users`
+    this.userApi = `${environment.apiUrl}api/v1/users`
     this.currentUserSubject = new BehaviorSubject<User>(this.storage.getItem('currentUser'))
     this.currentUser = this.currentUserSubject.asObservable()
   }
