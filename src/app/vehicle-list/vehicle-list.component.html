@@ -1,1 +1,20 @@
-<p>vehicle-list works!</p>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Make</th>
+      <th scope="col">Model</th>
+      <th scope="col">Year</th>
+      <th scope="col">Condition</th>
+    </tr>
+  </thead>
+  <!-- figure out some loop to make a table entry for each vehicle as they're created -->
+  <tbody *ngIf="vehicles">
+    <tr *ngFor="let vehicle of vehicles">
+      <th scope="row" class="make">{{ vehicle.make }}</th>
+      <td class ="model">{{ vehicle.model }}</td>
+      <td class ="year">{{ vehicle.year }}</td>
+      <td class ="condition">{{ vehicle.condition }}</td>
+    </tr>
+  </tbody>
+</table>

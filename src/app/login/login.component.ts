@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   createFormControls() {
     this.loginFormValues = {
-      email: ['', Validators.required],
+      userName: ['', Validators.required],
       password: ['', Validators.required]
     }
   }
@@ -50,7 +50,7 @@ export class LoginComponent implements OnInit, OnDestroy {
       return
     }
     const form = this.loginForm.value
-    const params = { email: form.email, password: form.password }
+    const params = { userName: form.userName, password: form.password }
     this.subs.add(
       this.userService.login(params).subscribe(data => {
         if (data && data.success && data.user) {

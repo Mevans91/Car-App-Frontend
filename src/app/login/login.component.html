@@ -6,11 +6,11 @@
             <h2 class="mb-5">Login</h2>
             <div class="form-group">
               <label class="label">Username</label>
-              <input [ngClass]="{'is-invalid': hasError && loginForm.get('username').errors}" class="form-control"
-                type="email" formControlName="email"
+              <input [ngClass]="{'is-invalid': hasError && loginForm.get('userName').errors}" class="form-control"
+                type="userName" formControlName="userName"
                 placeholder="Username Here">
-              <label class="form-error" *ngIf="hasError && loginForm.get('username').errors">
-                <span class="text-danger" *ngIf="loginForm.get('username').errors['required']" >
+              <label class="form-error" *ngIf="hasError && loginForm.get('userName').errors">
+                <span class="text-danger" *ngIf="loginForm.get('userName').errors['required']" >
                   Username is required!
                 </span>
               </label>

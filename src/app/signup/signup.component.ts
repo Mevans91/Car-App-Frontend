@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { User } from '../_models/user';
-import { LocalStorageService } from '../_services/local-storage.service';
+// import { LocalStorageService } from '../_services/local-storage.service';
 import { UserService } from '../_services/user.service';
 import { MustMatch } from './must-match.validator';
 
@@ -23,7 +23,7 @@ export class SignupComponent implements OnInit, OnDestroy {
 
   constructor(
     private fb: FormBuilder,
-    private storageService: LocalStorageService,
+    // private storageService: LocalStorageService,
     private userService: UserService,
     private router: Router
   ) { }
@@ -31,13 +31,13 @@ export class SignupComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.createFormControls()
     this.createForm()
-    this.retrieveMyEmailFromStorage()
+    // this.retrieveMyEmailFromStorage()
   }
 
-   retrieveMyEmailFromStorage() {
-     const myEmail = this.storageService.getItem('myEmail')
-     console.log('myEmail = ', myEmail)
-   }
+  //  retrieveMyEmailFromStorage() {
+  //    const myEmail = this.storageService.getItem('myEmail')
+  //    console.log('myEmail = ', myEmail)
+  //  }
 
   createFormControls() {
     this.formValues = {
@@ -73,7 +73,7 @@ export class SignupComponent implements OnInit, OnDestroy {
     const params = {
       first_name: form.firstName,
       last_name: form.lastName,
-      username: form.userName,
+      userName: form.userName,
       location: form.location,
       email: form.email,
       password: form.password,

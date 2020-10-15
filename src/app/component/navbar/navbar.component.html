@@ -23,7 +23,7 @@
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active mt-2 d-none d-md-block">
         <a class="nav-link text-uppercase">
-            Hi, {{currentUser.username}}!
+            Hi, {{currentUser.userName}}!
         </a>
     </li>
     <li class="nav-item mt-3 dropdown">
@@ -70,11 +70,25 @@
               <fa-icon [icon]="['fas', 'arrow-left']" size="sm"></fa-icon>
           </button>
         </a>
-        </li>
     </ul>
   </div>
 </nav>
 
+<nav *ngIf="router.isActive('/inventory', true)"  class="navbar navbar-expand">
+  <img src="./../../assets/images/Buzzle.png" alt="logo" width="80px" height="80px" [routerLink]="['/home']">
+  <a class="navbar-brand" [routerLink]="['/home']">Hive</a>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item mt-2">
+        <a class="nav-link" [routerLink]="['/home']">
+          <button class="btn btn-outline-primary btn-navbar">Back
+              <fa-icon [icon]="['fas', 'arrow-left']" size="sm"></fa-icon>
+          </button>
+        </a>
+    </ul>
+  </div>
+</nav>
 
 
 
