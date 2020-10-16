@@ -13,16 +13,17 @@ import { Vehicle } from '../_models/vehicle';
 export class VehicleListComponent implements OnInit {
   vehicles: Vehicle[] = []
 
+
   constructor(
     private vehicleService: VehicleService,
     private vehicleListService: VehicleListService
   ) { }
 
   ngOnInit(): void {
-    this.retrieveAllMovies()
+    this.retrieveAllVehicles()
   }
 
-  retrieveAllMovies() {
+  retrieveAllVehicles() {
     this.vehicleListService.getAllVehicles().subscribe(vehicles => {
       if (vehicles) {
         this.vehicles = vehicles
@@ -33,5 +34,7 @@ export class VehicleListComponent implements OnInit {
       }
     })
   }
+
+
 
 }
