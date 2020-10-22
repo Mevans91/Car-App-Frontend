@@ -1,4 +1,4 @@
-<div class="jumbotron jumbotron-fluid">
+<!-- <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <h1 class="display-4">Hive Inventory System</h1>
     <p class="lead">The premiere Inventory management system, specifically tailored with your dealership chain in mind.</p>
@@ -17,8 +17,113 @@
       <img src="./../../assets/images/cars.jpg" class="d-block w-100" alt="Carousel3">
     </div>
   </div>
+</div> -->
+
+<div class="row row-cols-1 row-cols-md-2 container">
+  <div class="col mb-4">
+    <div class="card">
+      <div class="card-body">
+        <fa-icon [icon]="['fas', 'car']" size="7x"></fa-icon>
+        <br>
+        <button class="btn btn-outline-primary" [routerLink]="['/inventory']">View Inventory</button>
+      </div>
+    </div>
+  </div>
+  <div class="col mb-4">
+    <div class="card">
+      <div class="card-body">
+        <fa-icon [icon]="['fas', 'tools']" size="7x"></fa-icon>
+        <br>
+        <button class="btn btn-outline-primary" [routerLink]="['/service']">Service Dept</button>
+      </div>
+    </div>
+  </div>
+  <div class="col mb-4">
+    <div class="card">
+      <div class="card-body">
+        <fa-icon [icon]="['fas', 'cog']" size="7x"></fa-icon>
+        <br>
+        <button class="btn btn-outline-primary">Parts</button>
+      </div>
+    </div>
+  </div>
+  <div class="col mb-4">
+    <div class="card">
+      <div class="card-body">
+        <fa-icon [icon]="['fas', 'building']" size="7x"></fa-icon>
+        <br>
+        <button class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">Dealership Locations</button>
+      </div>
+    </div>
+  </div>
+  <div class="col mb-4">
+    <div class="card">
+      <div class="card-body">
+        <fa-icon [icon]="['fas', 'wrench']" size="5x"></fa-icon>
+        <fa-icon [icon]="['fas', 'hard-hat']" size="7x"></fa-icon>
+        <br>
+        <button class="btn btn-outline-primary">Feature Under Construction</button>
+      </div>
+    </div>
+  </div>
+  <div class="col mb-4">
+    <div class="card">
+      <div class="card-body">
+        <fa-icon [icon]="['fas', 'address-card']" size="7x"></fa-icon>
+        <br>
+        <button class="btn btn-outline-primary">Employee Profile</button>
+      </div>
+    </div>
+  </div>
+  <div class="col mb-4">
+    <div class="card">
+      <div class="card-body">
+        <fa-icon [icon]="['fas', 'wrench']" size="5x"></fa-icon>
+        <fa-icon [icon]="['fas', 'hard-hat']" size="7x"></fa-icon>
+        <br>
+        <button class="btn btn-outline-primary">Feature Under Construction</button>
+      </div>
+    </div>
+  </div>
+  <div class="col mb-4">
+    <div class="card">
+      <div class="card-body">
+        <fa-icon [icon]="['fas', 'wrench']" size="5x"></fa-icon>
+        <fa-icon [icon]="['fas', 'hard-hat']" size="7x"></fa-icon>
+        <br>
+        <button class="btn btn-outline-primary">Feature Under Construction</button>
+      </div>
+    </div>
+  </div>
+  <div class="col mb-4">
+    <div class="card">
+      <div class="card-body">
+        <fa-icon [icon]="['fas', 'wrench']" size="5x"></fa-icon>
+        <fa-icon [icon]="['fas', 'hard-hat']" size="7x"></fa-icon>
+        <br>
+        <button class="btn btn-outline-primary">Feature Under Construction</button>
+      </div>
+    </div>
+  </div>
 </div>
 
-
-
-
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Choose a Dealership Site
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary cape">Cape Girardeau</button>
+        <button type="button" class="btn btn-primary carbondale">Carbondale</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -45,9 +45,8 @@ export class VehiclesComponent implements OnInit, OnDestroy {
       this.vehicleService.getVehicleById(params).subscribe(data => {
         console.log(data)
         if (data) {
-          this.vehicle = new Vehicle(data.vehicle)
-
-          this.year = this.vehicle.year
+          this.vehicle = new Vehicle(data.vehicle[0]);
+          console.log(this.vehicle[0].year);
         }
       }, error => {
         if (error) {

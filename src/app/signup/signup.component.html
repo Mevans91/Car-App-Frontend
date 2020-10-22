@@ -28,10 +28,10 @@
       </div>
       <div class="form-group">
         <label class="label">Username</label>
-        <input [ngClass]="{'is-invalid': hasError && form.get('userName').errors}" class="form-control" type="text"
-          formControlName="userName" placeholder="Username">
-        <label class="form-error" *ngIf="hasError && form.get('userName').errors">
-          <span class="text-danger" *ngIf="form.get('userName').errors['required']">
+        <input [ngClass]="{'is-invalid': hasError && form.get('username').errors}" class="form-control" type="text"
+          formControlName="username" placeholder="Username">
+        <label class="form-error" *ngIf="hasError && form.get('username').errors">
+          <span class="text-danger" *ngIf="form.get('username').errors['required']">
             Username is required!
           </span>
         </label>

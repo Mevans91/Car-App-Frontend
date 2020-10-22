@@ -1,4 +1,4 @@
-<nav *ngIf="!currentUser && router.isActive('/home', true)"  class="navbar navbar-expand">
+<!-- <nav *ngIf="currentUser && router.isActive('/home', true)"  class="navbar navbar-expand">
   <img src="./../../assets/images/Buzzle.png" alt="logo" width="80px" height="80px" [routerLink]="['/home']">
   <a class="navbar-brand" [routerLink]="['/home']">Hive</a>
 
@@ -13,9 +13,9 @@
 
     </ul>
   </div>
-</nav>
+</nav> -->
 
-<nav *ngIf="currentUser && router.isActive('/home', true)"  class="navbar navbar-expand">
+<nav class="navbar navbar-expand">
   <img src="./../../assets/images/Buzzle.png" alt="logo" width="80px" height="80px" [routerLink]="['/home']">
   <a class="navbar-brand" [routerLink]="['/home']">Hive</a>
 
@@ -23,7 +23,8 @@
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active mt-2 d-none d-md-block">
         <a class="nav-link text-uppercase">
-            Hi, {{currentUser.userName}}!
+          Hello!
+            <!-- Hi, {{currentUser.username}}! -->
         </a>
     </li>
     <li class="nav-item mt-3 dropdown">
@@ -31,7 +32,7 @@
         Quick Links <fa-icon [icon]="['fas', 'bars']"></fa-icon>
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">View Inventory</a>
+        <a class="dropdown-item" href="/inventory">View Inventory</a>
         <a class="dropdown-item" href="#">Service</a>
         <a class="dropdown-item" href="#">Appointments</a>
         <a class="dropdown-item" href="#">Profile</a>
@@ -42,7 +43,7 @@
   </div>
 </nav>
 
-<nav *ngIf="router.isActive('/login', true)"  class="navbar navbar-expand">
+<!-- <nav *ngIf="router.isActive('/login', true)"  class="navbar navbar-expand">
   <img src="./../../assets/images/Buzzle.png" alt="logo" width="80px" height="80px" [routerLink]="['/home']">
   <a class="navbar-brand" [routerLink]="['/home']">Hive</a>
 
@@ -56,9 +57,9 @@
         </a>
     </ul>
   </div>
-</nav>
+</nav> -->
 
-<nav *ngIf="router.isActive('/signup', true)"  class="navbar navbar-expand">
+<!-- <nav *ngIf="router.isActive('/inventory', true)"  class="navbar navbar-expand">
   <img src="./../../assets/images/Buzzle.png" alt="logo" width="80px" height="80px" [routerLink]="['/home']">
   <a class="navbar-brand" [routerLink]="['/home']">Hive</a>
 
@@ -72,23 +73,7 @@
         </a>
     </ul>
   </div>
-</nav>
-
-<nav *ngIf="router.isActive('/inventory', true)"  class="navbar navbar-expand">
-  <img src="./../../assets/images/Buzzle.png" alt="logo" width="80px" height="80px" [routerLink]="['/home']">
-  <a class="navbar-brand" [routerLink]="['/home']">Hive</a>
-
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item mt-2">
-        <a class="nav-link" [routerLink]="['/home']">
-          <button class="btn btn-outline-primary btn-navbar">Back
-              <fa-icon [icon]="['fas', 'arrow-left']" size="sm"></fa-icon>
-          </button>
-        </a>
-    </ul>
-  </div>
-</nav>
+</nav> -->
 
 
 

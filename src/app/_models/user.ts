@@ -3,7 +3,7 @@ export class User {
   firstName: string;
   lastName: string;
   email: string;
-  userName: string;
+  username: string;
   password: string;
   location: string;
   token: string;
@@ -12,7 +12,7 @@ export class User {
     firstName = '',
     lastName = '',
     email = '',
-    userName = '',
+    username = '',
     password = '',
     location = '',
     token = '',
@@ -24,7 +24,7 @@ export class User {
     this.firstName = firstName
     this.lastName = lastName
     this.email = email
-    this.userName = userName
+    this.username = username
     this.password = password
     this.location = location
     this.token = token

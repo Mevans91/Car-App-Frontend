@@ -5,6 +5,9 @@ import { VehiclesComponent } from './vehicles/vehicles.component';
 import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { ScheduleComponent } from './schedule/schedule.component';
+import { ServiceComponent } from './service/service.component';
+
 
 
 const routes: Routes = [
@@ -38,6 +41,16 @@ const routes: Routes = [
     component: LoginComponent,
     pathMatch: 'full'
   },
+  {
+    path: 'schedule',
+    component: ScheduleComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'service',
+    component: ServiceComponent,
+    pathMatch: 'full'
+  }
 
 ];
 

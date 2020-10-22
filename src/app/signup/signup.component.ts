@@ -43,7 +43,7 @@ export class SignupComponent implements OnInit, OnDestroy {
     this.formValues = {
       firstName: ['', Validators.compose([Validators.required])],
       lastName: ['', Validators.compose([Validators.required])],
-      userName: ['', Validators.compose([Validators.required])],
+      username: ['', Validators.compose([Validators.required])],
       location: ['', Validators.compose([Validators.required])],
       email: ['', Validators.compose([Validators.required])],
       password: ['', Validators.compose([Validators.required, Validators.minLength(4), Validators.maxLength(10)])],
@@ -73,7 +73,7 @@ export class SignupComponent implements OnInit, OnDestroy {
     const params = {
       first_name: form.firstName,
       last_name: form.lastName,
-      userName: form.userName,
+      username: form.username,
       location: form.location,
       email: form.email,
       password: form.password,
